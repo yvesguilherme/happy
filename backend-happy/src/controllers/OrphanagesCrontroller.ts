@@ -57,7 +57,7 @@ export default {
       about,
       instructions,
       opening_hours,
-      open_on_weekends,
+      open_on_weekends: open_on_weekends == 'true',
       images
     };
 
@@ -78,7 +78,7 @@ export default {
 
     await schema.validate(data, {
       /**
-       * Faz com que seja retornado vários erros se existirem 
+       * Faz com que seja retornado vários erros se existir 
        * mais de um campo e não apenas a primeira ocorrência.
        */
       abortEarly: false,
